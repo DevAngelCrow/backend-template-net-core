@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="use-case\department\department-create\" />
+    <Folder Include="use-case\department\department-delete\" />
+    <Folder Include="use-case\department\department-get\" />
+    <Folder Include="use-case\department\department-get-by-id\" />
+    <Folder Include="use-case\department\department-update\" />
+    <Folder Include="use-case\district\district-create\" />
+    <Folder Include="use-case\district\district-delete\" />
+    <Folder Include="use-case\district\district-get-all\" />
+    <Folder Include="use-case\district\district-get-by-id\" />
+    <Folder Include="use-case\district\district-update\" />
+    <Folder Include="use-case\municipality\municipality-create\" />
+    <Folder Include="use-case\municipality\municipality-delete\" />
+    <Folder Include="use-case\municipality\municipality-get-all\" />
+    <Folder Include="use-case\municipality\municipality-get-by-id\" />
+    <Folder Include="use-case\municipality\municipality-update\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Location.Domain\Location.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
