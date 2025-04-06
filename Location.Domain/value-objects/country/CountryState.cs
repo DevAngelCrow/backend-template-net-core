@@ -9,11 +9,11 @@ namespace Location.Domain.value_objects.country
 {
     internal class CountryState
     {
-        public bool state { get; set; }
-        public CountryState(bool state)
+        public bool value { get; set; }
+        public CountryState(bool value)
         {
-            this.state = state;
-            required(this.state);
+            this.value = value;
+            required(this.value);
         }
         private void required(bool value)
         {

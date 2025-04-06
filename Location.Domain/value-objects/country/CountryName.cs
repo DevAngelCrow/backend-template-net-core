@@ -9,12 +9,12 @@ namespace Location.Domain.value_objects.country
 {
     internal class CountryName
     {
-        public string name { get; set; }
+        public string value { get; set; }
 
-        public CountryName(string name)
+        public CountryName(string value)
         {
-            this.name = name;
-            required(this.name);
+            this.value = value;
+            required(this.value);
         }
 
         private void required(string name)

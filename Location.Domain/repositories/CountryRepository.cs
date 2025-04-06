@@ -12,11 +12,11 @@ namespace Location.Domain.repositories
 {
     internal interface CountryRepository
     {
-        Task Create(Country country);
-        Task<IEnumerable<Country>> GetAll();
-        Task<Country?> GetOneById(CountryId id);
-        Task Update(Country country);
-        Task Delete(CountryId id);
-        Task<IEnumerable<CountryId>?> FindMany(IEnumerable<CountryId> countries);
+        public Task Create(Country country);
+        public Task<IEnumerable<Country>> GetAll();
+        public Task<Country?> GetOneById(CountryId id);
+        public Task Update(Country country);
+        public Task Delete(CountryId id);
+        public Task<IEnumerable<CountryId>?> FindMany(IEnumerable<CountryId> countries);
     }
 }

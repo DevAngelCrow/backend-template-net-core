@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="db\models\" />
     <Folder Include="db\migrations\" />
     <Folder Include="db\seeders\" />
     <Folder Include="services-container\" />
