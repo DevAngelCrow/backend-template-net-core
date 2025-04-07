@@ -7,7 +7,7 @@ using Location.Domain.value_objects.country;
 
 namespace Location.Domain.entities
 {
-    internal class Country
+    public class Country
     {
         public CountryId id { get; set; }
         public CountryName name { get; set; }

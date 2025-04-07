@@ -26,6 +26,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Location.Domain\Location.Domain.csproj" />
+	  <InternalsVisibleTo Include="DependencyInyectionContainer"/>
+	  <InternalsVisibleTo Include="backend_template_net_core"/>
   </ItemGroup>
 
 </Project>

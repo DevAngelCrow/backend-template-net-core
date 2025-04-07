@@ -13,7 +13,7 @@ public partial class CtlDepartment
 
     public int IdCountry { get; set; }
 
-    public DateTime? CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
 

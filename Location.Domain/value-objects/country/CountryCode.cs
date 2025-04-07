@@ -3,7 +3,7 @@
 
 namespace Location.Domain.value_objects.country
 {
-    internal class CountryCode
+    public class CountryCode
     {
         public string value { get; set; }
         public CountryCode(string value)

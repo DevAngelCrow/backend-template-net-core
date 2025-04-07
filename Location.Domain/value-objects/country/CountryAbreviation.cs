@@ -7,7 +7,7 @@ using Shared.Domain.errors;
 
 namespace Location.Domain.value_objects.country
 {
-    internal class CountryAbbreviation
+    public class CountryAbbreviation
     {
         public string? value { get; set; } = null;
         public CountryAbbreviation(string value)

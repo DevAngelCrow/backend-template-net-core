@@ -24,7 +24,8 @@ namespace Location.Application.use_case.country.country_edit
                 new CountryId(id),
                 new CountryName(name),
                 new CountryAbbreviation(abbreviation),
-                new CountryCode(code)
+                new CountryCode(code),
+                new CountryState(state)
                 );
             await this.repository.GetOneById(country.id);
 

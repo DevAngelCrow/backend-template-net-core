@@ -15,7 +15,7 @@ public partial class CtlDistrict
 
     public bool? State { get; set; }
 
-    public DateTime? CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
 

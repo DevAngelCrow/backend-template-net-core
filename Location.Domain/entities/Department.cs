@@ -14,6 +14,8 @@ namespace Location.Domain.entities
         public DepartmentDescription description { get; set; }
         public DepartmentIdCountry id_country { get; set; }
 
+        public virtual Country? Country { get; set; }
+
         public Department(DepartmentId id, DepartmentName name, DepartmentDescription description, DepartmentIdCountry id_country)
         {
             this.id = id;

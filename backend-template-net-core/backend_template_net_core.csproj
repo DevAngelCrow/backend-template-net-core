@@ -22,6 +22,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Location.Application\Location.Application.csproj" />
+    <ProjectReference Include="..\Location.Domain\Location.Domain.csproj" />
+    <ProjectReference Include="..\Location.Infrastructure\Location.Infrastructure.csproj" />
     <ProjectReference Include="..\Shared.Infrastructure\Shared.Infrastructure.csproj" />
   </ItemGroup>
 

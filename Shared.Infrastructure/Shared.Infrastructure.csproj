@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="db\migrations\" />
     <Folder Include="db\seeders\" />
-    <Folder Include="services-container\" />
   </ItemGroup>
 
   <ItemGroup>

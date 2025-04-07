@@ -7,7 +7,7 @@ using Shared.Domain.errors;
 
 namespace Location.Domain.value_objects.country
 {
-    internal class CountryState
+    public class CountryState
     {
         public bool value { get; set; }
         public CountryState(bool value)
@@ -17,10 +17,10 @@ namespace Location.Domain.value_objects.country
         }
         private void required(bool value)
         {
-            if (value.GetType() == typeof(bool))
-            {
-                throw CustomError.badRequest("The field state is required");
-            }
+            //if (value.GetType() == typeof(bool))
+            //{
+            //    throw CustomError.badRequest("The field state is required");
+            //}
         }
     }
 }

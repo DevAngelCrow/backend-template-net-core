@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Shared.Infrastructure.db.models;
 
-namespace Shared.Infrastructure.db;
+namespace Shared.Infrastructure.db.models;
 
 public partial class RolPermission
 {
@@ -12,7 +11,7 @@ public partial class RolPermission
 
     public int IdRol { get; set; }
 
-    public DateTime? CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
 

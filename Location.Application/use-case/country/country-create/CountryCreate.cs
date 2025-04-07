@@ -11,7 +11,7 @@ using System.Diagnostics.Metrics;
 
 namespace Location.Application.use_case.country.country_create
 {
-    internal class CountryCreate
+    public class CountryCreate
     {
         private readonly CountryRepository repository;
         public CountryCreate(CountryRepository repository)
@@ -20,11 +20,13 @@ namespace Location.Application.use_case.country.country_create
         }
         public async Task run(string name, string abbreviation, string code, bool state)
         {
+            Console.WriteLine(name+" "+abbreviation+" "+code+" "+state+"  Esto se supone que viene");  
             Country country = new Country(
                 new CountryId(1),
                 new CountryName(name),
                 new CountryAbbreviation(abbreviation),
-                new CountryCode(code));
+                new CountryCode(code),
+                new CountryState(state));
 
             await this.repository.Create(country);
 

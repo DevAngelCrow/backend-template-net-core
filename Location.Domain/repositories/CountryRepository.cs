@@ -10,7 +10,7 @@ using Location.Domain.value_objects.country;
 
 namespace Location.Domain.repositories
 {
-    internal interface CountryRepository
+    public interface CountryRepository
     {
         public Task Create(Country country);
         public Task<IEnumerable<Country>> GetAll();

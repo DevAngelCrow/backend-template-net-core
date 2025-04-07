@@ -1,5 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 using Shared.Infrastructure.db;
+using Location.Domain.repositories;
+using Location.Infrastructure.implementation.countryRepository;
+using Location.Application.use_case.country.country_create;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +15,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 var connectionString = builder.Configuration.GetConnectionString("PostgreSQLConnection");
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
+builder.Services.AddScoped<CountryRepository, ImplCountryRepository>();
+builder.Services.AddScoped<CountryCreate>();
+
 
 var app = builder.Build();
 

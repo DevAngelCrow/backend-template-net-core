@@ -17,7 +17,7 @@ public partial class MntAddress
 
     public int IdDistrict { get; set; }
 
-    public int? HouseNumber { get; set; }
+    public int HouseNumber { get; set; }
 
     public string? Block { get; set; }
 
@@ -25,7 +25,7 @@ public partial class MntAddress
 
     public string? Description { get; set; }
 
-    public DateTime? CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
 
@@ -33,7 +33,7 @@ public partial class MntAddress
 
     public bool? Current { get; set; }
 
-    public bool? Active { get; set; }
+    public bool Active { get; set; }
 
     public virtual CtlDistrict IdDistrictNavigation { get; set; } = null!;
 

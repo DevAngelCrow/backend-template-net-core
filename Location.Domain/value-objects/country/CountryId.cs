@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Location.Domain.value_objects.country
 {
-    internal class CountryId
+    public class CountryId
     {
         public int id { get; set; }
         public CountryId(int id)

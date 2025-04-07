@@ -22,6 +22,7 @@ namespace Location.Infrastructure.implementation.countryRepository
         {
             try
             {
+                Console.WriteLine(country.ToString(), "Esto trae country");
                 CtlCountry countryModel = new CtlCountry
                 {
                     Name = country.name.value,

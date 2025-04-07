@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Shared.Infrastructure.db.models;
 
-namespace Shared.Infrastructure.db;
+namespace Shared.Infrastructure.db.models;
 
 public partial class MntUser
 {
@@ -18,7 +17,7 @@ public partial class MntUser
 
     public DateTime LastAccess { get; set; }
 
-    public DateTime? CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
 

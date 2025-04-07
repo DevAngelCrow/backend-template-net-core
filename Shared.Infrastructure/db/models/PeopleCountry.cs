@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Shared.Infrastructure.db.models;
 
-namespace Shared.Infrastructure.db;
+namespace Shared.Infrastructure.db.models;
 
 public partial class PeopleCountry
 {
@@ -12,7 +11,7 @@ public partial class PeopleCountry
 
     public int IdCountry { get; set; }
 
-    public DateTime? CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; }
 
     public DateTime? UpdateAt { get; set; }
 

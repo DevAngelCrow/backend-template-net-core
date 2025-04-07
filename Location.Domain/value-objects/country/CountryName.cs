@@ -7,7 +7,7 @@ using Shared.Domain.errors;
 
 namespace Location.Domain.value_objects.country
 {
-    internal class CountryName
+    public class CountryName
     {
         public string value { get; set; }
 
@@ -17,9 +17,12 @@ namespace Location.Domain.value_objects.country
             required(this.value);
         }
 
-        private void required(string name)
+        private void required(string value)
         {
-            throw CustomError.badRequest("The field name is required");
+            if (value == null) {
+                throw CustomError.badRequest("The field name is required");
+            }
+            
         }
     }
 }

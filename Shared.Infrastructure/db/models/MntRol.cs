@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using Shared.Infrastructure.db.models;
 
-namespace Shared.Infrastructure.db;
+namespace Shared.Infrastructure.db.models;
 
 public partial class MntRol
 {
@@ -14,7 +13,7 @@ public partial class MntRol
 
     public int IdStatus { get; set; }
 
-    public DateTime? CreatedAt { get; set; }
+    public DateTime CreatedAt { get; set; }
 
     public DateTime? UpdatedAt { get; set; }
 
