@@ -11,7 +11,7 @@ using Shared.Domain.errors;
 
 namespace Location.Application.use_case.country.country_get_one_by_id
 {
-    internal class CountryGetOneById
+    public class CountryGetOneById
     {
         private readonly CountryRepository repository;
         public CountryGetOneById(CountryRepository repository)

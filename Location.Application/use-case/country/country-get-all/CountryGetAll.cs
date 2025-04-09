@@ -9,7 +9,7 @@ using Location.Domain.repositories;
 
 namespace Location.Application.use_case.country.country_get_all
 {
-    internal class CountryGetAll
+    public class CountryGetAll
     {
         private readonly CountryRepository repository;
 

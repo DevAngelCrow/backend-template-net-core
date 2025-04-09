@@ -8,10 +8,10 @@ namespace Location.Domain.value_objects.country
 {
     public class CountryId
     {
-        public int id { get; set; }
-        public CountryId(int id)
+        public int value { get; set; }
+        public CountryId(int value)
         {
-            this.id = id;
+            this.value = value;
         }
     }
 }

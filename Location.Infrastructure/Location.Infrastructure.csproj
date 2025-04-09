@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="controllers\" />
     <Folder Include="implementation\departmentRepository\" />
     <Folder Include="implementation\districtRepository\" />
     <Folder Include="implementation\municipalityRepository\" />
@@ -26,7 +25,7 @@
     <ProjectReference Include="..\Location.Domain\Location.Domain.csproj" />
     <ProjectReference Include="..\Shared.Domain\Shared.Domain.csproj" />
     <ProjectReference Include="..\Shared.Infrastructure\Shared.Infrastructure.csproj" />
-	 <InternalsVisibleTo Include="DependencyInyectionContainer"/>
+	 <InternalsVisibleTo Include="DependencyInyectionContainer" />
 	  <InternalsVisibleTo Include="backend_template_net_core" />
   </ItemGroup>
 

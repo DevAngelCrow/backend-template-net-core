@@ -8,7 +8,7 @@ using Location.Domain.value_objects.country;
 
 namespace Location.Application.use_case.country.country_find_many
 {
-    internal class CountryFindMany
+    public class CountryFindMany
     {
         private readonly CountryRepository repository;
 
