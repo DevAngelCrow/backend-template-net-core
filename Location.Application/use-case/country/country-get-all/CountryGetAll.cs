@@ -4,6 +4,7 @@ using System.Diagnostics.Metrics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Location.Domain.dtos.country;
 using Location.Domain.entities;
 using Location.Domain.repositories;
 
@@ -18,9 +19,9 @@ namespace Location.Application.use_case.country.country_get_all
             this.repository = repository;
         }
 
-        public async Task<IEnumerable<Country?>> run()
+        public async Task<PaginatedCountryDTO> run(bool pagination, int page, int per_page)
         {
-            return await this.repository.GetAll();
+            return await this.repository.GetAll(pagination, page, per_page);
 
         }
     }

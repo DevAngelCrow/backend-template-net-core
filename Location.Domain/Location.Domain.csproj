@@ -7,11 +7,17 @@
   </PropertyGroup>
 
   <ItemGroup>
-	  <InternalsVisibleTo Include="Location.Application"/>
-	  <InternalsVisibleTo Include="Location.Infrastructure"/>
-	  <InternalsVisibleTo Include="DependencyInyectionContainer"/>
-	  <InternalsVisibleTo Include="backend_template_net_core"/>
+	  <InternalsVisibleTo Include="Location.Application" />
+	  <InternalsVisibleTo Include="Location.Infrastructure" />
+	  <InternalsVisibleTo Include="DependencyInyectionContainer" />
+	  <InternalsVisibleTo Include="backend_template_net_core" />
     <ProjectReference Include="..\Shared.Domain\Shared.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="dtos\department\" />
+    <Folder Include="dtos\district\" />
+    <Folder Include="dtos\municipality\" />
   </ItemGroup>
 
 </Project>

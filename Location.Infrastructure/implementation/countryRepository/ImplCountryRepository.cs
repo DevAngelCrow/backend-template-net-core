@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Location.Domain.dtos.country;
 using Location.Domain.entities;
 using Location.Domain.repositories;
 using Location.Domain.value_objects.country;
@@ -15,6 +17,7 @@ namespace Location.Infrastructure.implementation.countryRepository
 {
     internal class ImplCountryRepository : CountryRepository
     {
+        private List<Country> countries = new List<Country>();
         private readonly ApplicationDbContext appDbContext;
         public ImplCountryRepository(ApplicationDbContext appDbContext) {
             this.appDbContext = appDbContext;
@@ -36,7 +39,6 @@ namespace Location.Infrastructure.implementation.countryRepository
             }catch{
                 throw CustomError.internalServerError("Internal server error");
             }
-            //throw new NotImplementedException();
         }
 
         public Task Delete(CountryId id)
@@ -49,9 +51,32 @@ namespace Location.Infrastructure.implementation.countryRepository
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Country>> GetAll()
+        public async Task<PaginatedCountryDTO> GetAll(bool pagination, int page, int per_page)
         {
-            throw new NotImplementedException();
+            try
+            {
+                int totalCount = await appDbContext.CtlCountries.CountAsync();
+
+                List<CtlCountry> countries = await appDbContext.CtlCountries.OrderBy(country => country.Id).Skip( (page - 1) * per_page ).Take(per_page).ToListAsync();
+                
+                
+                this.countries = countries.Select(country => this.mapToDomain(country)).ToList();
+
+                PaginatedCountryDTO itemsDTO = new PaginatedCountryDTO{
+                    CountryList = this.countries,
+                    Page = page,
+                    PerPage = per_page,
+                    TotalItems = totalCount,
+                    TotalPages = (totalCount % per_page) == 0 ? (totalCount/per_page) : (totalCount / per_page) + 1,
+                };
+                PaginatedCountryDTO itemsResult = itemsDTO;
+                
+                return itemsResult;
+                
+            }
+            catch {
+                throw CustomError.internalServerError("Internal server error");
+            }
         }
 
         async public Task<Country?> GetOneById(CountryId id)

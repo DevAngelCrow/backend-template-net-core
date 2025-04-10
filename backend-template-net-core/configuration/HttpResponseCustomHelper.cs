@@ -6,9 +6,9 @@ namespace backend_template_net_core.configuration
 {
     public static class HttpResponseCustomHelper
     {
-        public static ApiResponse<T> Success<T>(T data)
+        public static ApiResponse<T> Success<T>(T data, string message)
         {
-            return new ApiResponse<T> { StatusCode = (int)HttpStatusCode.OK, Data = data };
+            return new ApiResponse<T> { StatusCode = (int)HttpStatusCode.OK, Data = data, Message = message };
         }
 
         public static ApiResponse<T> Created<T>(T data)

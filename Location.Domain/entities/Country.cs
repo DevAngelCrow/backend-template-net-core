@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Location.Domain.dtos.country;
 using Location.Domain.value_objects.country;
 
 namespace Location.Domain.entities
@@ -22,6 +23,18 @@ namespace Location.Domain.entities
             this.abbreviation = abbreviation;
             this.code = code;
             this.state = state;
+        }
+
+        public CountryPrimitivesDTO mapToPrimitives()
+        {
+            return new CountryPrimitivesDTO()
+            {
+                Id = this.id.value,
+                Name = this.name.value,
+                Abbreviation = this.abbreviation.value,
+                Code = this.code.value,
+                state = this.state.value,
+            };
         }
     }
 }
